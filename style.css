@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: montserrat; 
+}
+:root{
+    --font-h1: 45px;
+    --font-h2: 30px;
+    --prime-color-1: #000000;
+    --prime-color-2: #FFFFFF;  
+}
+
+nav{
+    padding: 10px 50px;
+    width: 100%;
+    align-items: center;
+    font-size: 22px;
+    display: flex;
+    background: var(--prime-color-1);
+    color: var(--prime-color-2);
+    justify-content: space-between;   
+}
+
+nav .menu{
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+nav li a{
+color: var(--prime-color-2);
+font-size: 22px;
+padding: 0 20px;
+}
+nav li a:hover{
+    text-decoration: underline;
+    color:aliceblue;
+}
+
+nav .toggle{
+    cursor: pointer;
+    display: none;
+}
+nav .toggle .bars{
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position :relative;
+    width: 18px;
+}
+nav .toggle .bars::before, nav .toggle .bars::after{
+    background-color: #999;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 22px;
+}
+nav .toggle .bars::before{
+    top:7px;
+}
+nav .toggle .bars::after{
+    top:-7px;
+}
+
+nav button{
+    margin: 10px;
+    padding: 7px 13px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+nav .btn .login{
+    background:rgb(18, 167, 194);
+    border: 1px rgb(18, 167, 200) solid;
+    color: var(--prime-color-2);
+} 
+
+nav .btn .login:hover{
+    background: rgb(70, 99, 104) ;
+}
+nav .btn .signup{
+    background:transparent;
+    border: 1px rgb(18, 167, 200)  solid;
+    color: var(--prime-color-2);
+} 
+
+nav .btn .signup:hover{
+    background: rgb(18, 167, 194) ;
+}
+
+
+@media all and (max-width:1024px){
+    nav li a{
+        font-size: 18px;
+        padding: 0 15px;
+    }
+    nav button{
+        margin: 5px;
+        padding: 6px 10px;
+        font-size: 15px;
+    }
+}
+@media all and (max-width:800px){
+    nav .toggle{
+        display: block;
+       }
+       nav .btn{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        background-color: #000000;
+        display:none;
+        top:303px;
+        left:0;
+       }
+       nav .menu{
+        position: absolute;
+        text-align: center;
+        display:none;
+        top:75px;
+        left:0;
+        width: 100%;
+        background-color: #000000;
+       }
+       nav .menu.active, nav .btn.active{
+        display: block;
+    }
+       nav li{
+        padding: 10px 0;
+       }
+    }
+    
+
+@media all and (max-width:450px){
+    
+    }
+    
